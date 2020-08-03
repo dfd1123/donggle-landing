@@ -147,7 +147,7 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 #slide02 .service  div.big p{display:block;margin:0 auto;padding:35px 0 0 0}
 #slide02 .service  div.big h3{display:block;font-size:16px;margin:0 auto;padding:30px 20px;color:#777777;font-weight:400;letter-spacing:-1px;box-sizing:border-box;width:100%;}
 #slide02 .service  div.big h3 strong{display:block;font-size:20px;margin:0 auto;font-size:28px;color:#000;font-weight:600;margin-bottom:10px;}
-#slide02 .service  div.big span{position:absolute;top:-25%;float:right;margin-right:30%;}
+#slide02 .service  div.big span{position:absolute;top:-15%;float:right;margin-right:0%;margin-left:26%;}
 
 
 
@@ -295,6 +295,14 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 #slide02 .service div.sv h3{bottom:20%;}
 #slide02 .service div.sv i{bottom:7%;}
 
+#slide02 .service div.big span{
+	margin-left: 19%;
+}
+
+#slide02 .service div.big span img{
+	transform: scale(0.8);
+}
+
 }
 
 @media screen and (max-width: 1400px) {
@@ -312,8 +320,8 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 
 #slide02 .service div.big h3 strong{font-size:22px;}
 #slide02 .service div.big{max-width:300px;height:420px;margin-top:0;}
-#slide02 .service div.big span{top:-25%;margin-left:-5%;}
-#slide02 .service div.big span img{display:block;max-width:400px;}
+#slide02 .service div.big span{top: -11%;margin-left: 26%;}
+#slide02 .service div.big span img{display:block;max-width:300px;}
 #slide02 .service div.big p{padding-top:20px;}
 #slide02 .service div.big p img{display:block;margin:0 auto;text-align:center;max-width:40%;}
 #slide02 .service div.big h3{position:absolute;bottom:20px;padding-top:15px;}
