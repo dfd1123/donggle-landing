@@ -475,7 +475,7 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 
 #slide02 .service h2, #slide04 .news h2, #slide05 .guide h2, #slide03 h2{font-size:20px;text-align:center;padding:15px 0;}
 .grid{max-width:640px;}
-.grid-item{width:47%;}
+.grid-item{width:46%;}
 #slide03{padding-bottom:50px;}
 #slide03 > em{width:60%;margin:0 auto;font-size:16px;text-align:center;left:5%;bottom:20px;}
 
