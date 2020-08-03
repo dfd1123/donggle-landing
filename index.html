@@ -366,6 +366,18 @@
 						nextEl: '.swiper-button-next',
 						prevEl: '.swiper-button-prev',
 					},
+					breakpoints: {
+						1025:{
+							centeredSlides: true,
+							slidesPerView: 3,
+							spaceBetween: 30
+						},
+						640:{
+							centeredSlides: true,
+							slidesPerView: 1,
+							spaceBetween: 10
+						}
+					}
 				});
     }, function (jqXHR, textStatus, errorThrown) {
         console.log('실패 캐이스')
