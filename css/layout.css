@@ -544,7 +544,7 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
 	.grid-item{width:100%;}
 }
 
