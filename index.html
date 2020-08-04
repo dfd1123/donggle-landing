@@ -88,20 +88,45 @@
 <![endif]-->
 
   <script>
-		var reviewLists = []
-	$(document).ready(function(){
-		$.support.cors = true;
-		var windowWidth = $( window ).width();
-		if(windowWidth > 1024) {
-		  $.getScript("./js/scrolla.jquery.js", function(){
-				 $('.animate').scrolla({
-				mobile: false
-			});
-			
-		  });
-		 
+		function PositionConfirm(){
+
 		}
-	});
+		$(document).ready(function(){
+			$.support.cors = true;
+			var windowWidth = $( window ).width();
+			if(windowWidth > 1024) {
+				$.getScript("./js/scrolla.jquery.js", function(){
+					$('.animate').scrolla({
+					mobile: false
+				});
+				
+				});
+			
+			}
+
+			$(window).scroll(function () {
+				var scrollTop = $(document).scrollTop();
+
+				if($('#slide01').offset().top <= scrollTop && scrollTop < $('#slide02').offset().top){
+					$('#main_lnb ul li a').removeClass('on');
+					$('#a-slide01').addClass('on');
+				}else if($('#slide02').offset().top <= scrollTop && scrollTop < $('#slide03').offset().top){
+					console.log('#2');
+					$('#main_lnb ul li a').removeClass('on');
+					$('#a-slide02').addClass('on');
+				}else if($('#slide03').offset().top <= scrollTop && scrollTop < $('#slide04').offset().top -20){
+					$('#main_lnb ul li a').removeClass('on');
+					$('#a-slide03').addClass('on');
+				}else if($('#slide04').offset().top - 20 <= scrollTop && scrollTop < $('#slide05').offset().top - 20){
+					$('#main_lnb ul li a').removeClass('on');
+					$('#a-slide04').addClass('on');
+				}else{
+					$('#main_lnb ul li a').removeClass('on');
+					$('#a-slide05').addClass('on');
+				}
+				
+			});
+		});
 </script>
 
 </head>
@@ -124,11 +149,11 @@
 			<h1><a href="/"><img src="./img/h1_logo_w.png" alt="로고"/><img src="./img/h1_logo_color.png" alt="로고"/></a></h1>
 			<div id="main_lnb" class="lnbline">
 				<ul>
-					<li><a href="#" rel="#slide01" class="on">앱 다운로드</a></li>
-					<li><a href="#" rel="#slide02">서비스&앱 소개</a></li>
-					<li><a href="#" rel="#slide03">사용자 리뷰</a></li>
-					<li><a href="#" rel="#slide04">관련 기사</a></li>
-					<li><a href="#" rel="#slide05">입점안내</a></li>
+					<li><a href="#" id="a-slide01" rel="#slide01" class="on">앱 다운로드</a></li>
+					<li><a href="#" id="a-slide02" rel="#slide02">서비스&앱 소개</a></li>
+					<li><a href="#" id="a-slide03" rel="#slide03">사용자 리뷰</a></li>
+					<li><a href="#" id="a-slide04" rel="#slide04">관련 기사</a></li>
+					<li><a href="#" id="a-slide05" rel="#slide05">입점안내</a></li>
 				</ul>
 			</div>
 			<p id="top_btn" class="en">scroll</p>
