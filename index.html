@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<title>donggle</title>
+<title>동글::이제 옷값만 내고 쇼핑하자</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css">
 <link rel="stylesheet" type="text/css" href="./css/layout.css">
 <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
@@ -23,15 +23,87 @@
 <script type="text/javascript" src="./js/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="./js/slick.js"></script>
 
+<!-- Channel Plugin Scripts -->
+<script>
+	(function () {
+		var w = window;
+		if (w.ChannelIO) {
+			return (window.console.error || window.console.log || function () {})(
+				"ChannelIO script included twice."
+			);
+		}
+		var d = window.document;
+		var ch = function () {
+			ch.c(arguments);
+		};
+		ch.q = [];
+		ch.c = function (args) {
+			ch.q.push(args);
+		};
+		w.ChannelIO = ch;
+		function l() {
+			if (w.ChannelIOInitialized) {
+				return;
+			}
+			w.ChannelIOInitialized = true;
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+			s.charset = "UTF-8";
+			var x = document.getElementsByTagName("script")[0];
+			x.parentNode.insertBefore(s, x);
+		}
+		if (document.readyState === "complete") {
+			l();
+		} else if (window.attachEvent) {
+			window.attachEvent("onload", l);
+		} else {
+			window.addEventListener("DOMContentLoaded", l, false);
+			window.addEventListener("load", l, false);
+		}
+	})();
+
+	var settings = {
+		pluginKey: "fe09506d-2594-4001-9039-336c2eaa1edb",
+		//memberId: "donggle2019@gmail.com",
+		customLauncherSelector: ".custom-button-1, #custom-button-2",
+		hideDefaultLauncher: false,
+		enabledTrackDefaultEvent: false,
+		enabledUtmSourceTrack: false,
+		openChatDirectlyAsPossible: true,
+		mobileOpenUI: "iframe",
+		zIndex: 1000,
+		locale: "ko",
+	};
+
+	ChannelIO("boot", settings);
+ 
+</script>
+<!-- End Channel Plugin -->
+
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
   <script>
-		function PositionConfirm(){
+		var userAgent = navigator.userAgent || navigator.vendor || window.opera
 
+		// Windows Phone must come first because its UA also contains "Android"
+		if (/windows phone/i.test(userAgent)) {
+			location.href='https://m.dong-gle.co.kr';
 		}
+
+		if (/android/i.test(userAgent)) {
+			location.href='https://m.dong-gle.co.kr';
+		}
+
+		// iOS detection from: http://stackoverflow.com/a/9039885/177710
+		if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+			location.href='https://m.dong-gle.co.kr';
+		}
+
 		$(document).ready(function(){
 			$.support.cors = true;
 			var windowWidth = $( window ).width();
@@ -247,7 +319,7 @@
 					</ul>
 					<dl>
 						<dt>앱 다운로드</dt>
-						<dd><a href="http://play.google.com/store/apps/details?id=com.mycisco.donggle.user"><img src="./img/img_google.png" alt=""/></a><a href="https://itunes.apple.com/kr/app/apple-store/동글/id1505168322"><img src="./img/img_app.png" alt=""/></a></dd>
+						<dd><a href="http://play.google.com/store/apps/details?id=com.mycisco.donggle.store"><img src="./img/img_google.png" alt=""/></a><a href="https://itunes.apple.com/kr/app/apple-store/동글-가맹점/id1506485764"><img src="./img/img_app.png" alt=""/></a></dd>
 					</dl>
 					<dl class="sitego">
 						<dt>동글 가맹점 사이트</dt>
