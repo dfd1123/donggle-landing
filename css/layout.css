@@ -121,7 +121,7 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 #slide02 .wbg{position:absolute;width:35%;left:0px;z-index:2;height:100%;background:#fff;}
 #slide02 .service{position:relative;width:90%;float:right;min-height:850px;margin:0 auto;text-align:center;}
 #slide02 .service h2{position:relative;display:block;width:100%;text-align:left;font-size:40px;z-index:3;letter-spacing:-0.5px;font-weight:600;text-align:left;padding:52px 0;}
-#slide02 .service h2:before{content:'doggle app';position:absolute;right:32%;text-transform:lowercase;font-weight:900;letter-spacing:5px;font-style:italic;font-family: 'Raleway', sans-serif;font-size:60px;-webkit-text-stroke: 1px #fff;color:rgba(256,256,256,0.0);}
+#slide02 .service h2:before{content:'donggle APP';position:absolute;right:32%;font-weight:900;letter-spacing:5px;font-style:italic;font-family: 'Raleway', sans-serif;font-size:60px;-webkit-text-stroke: 1px #fff;color:rgba(256,256,256,0.0);}
 #slide02 .service .center{width:95%;float:right;border:1px solid red;overflow:hidden;position:relative;padding:50px 0}
 
 #slide02 .service span.info{position:absolute;color:#9B9B9B;font-size:16px;left:5%;bottom:9%;text-align:left;z-index:3}
@@ -163,9 +163,9 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 
 
 #slide03{position:relative;width:100%;margin:0 auto;text-align:center;background:url(../img/bg_review.png) no-repeat left 90%;padding-top:80px;}
-#slide03 > em{position:absolute;bottom:12%;right:19%;font-weight:bold;font-style:normal;font-size:22px;z-index:10;}
+#slide03 > em{position:absolute;bottom:12%;right:19%;font-weight:bold;font-style:normal;font-size:22px;z-index:1;}
 #slide03 > em:before{content:'';display:inline-block;width:60px;height:1px;background:#222;vertical-align:middle;margin-right:10px;}
-#slide03 > em:after{content:'doggle store';position:absolute;width:100%;left:60px;margin-top:5px;z-index:-1;letter-spacing:3px;text-transform:uppercase;font-size:70px;color:#f3f3f3;font-family: 'Raleway', sans-serif;font-weight:800;font-style:italic;}
+#slide03 > em:after{content:'donggle store';position:absolute;width:100%;left:60px;margin-top:5px;z-index:-1;letter-spacing:3px;text-transform:uppercase;font-size:70px;color:#f3f3f3;font-family: 'Raleway', sans-serif;font-weight:800;font-style:italic;}
 #slide03 h2{position:relative;max-width:1278px;margin:0 auto;font-size:40px;letter-spacing:-0.5px;font-weight:600;text-align:left;padding:52px 0;}
 #slide03 h2 > em{display:inline-block;margin-left:5px;font-size:18px;font-style:normal;font-weight:300;}
 
@@ -509,6 +509,10 @@ background:url(../img/bg_merit.png) no-repeat right top;}
 #slide03 h2 > em{font-size:15px;font-weight:400;}
 #slide03{padding-top:10px;}
 #slide03 > em{left:0;}
+#slide03 .swiper-slide>div{
+	box-shadow: none;
+  border: 1px solid #ececec;
+}
 .swiper-container{}
 .grid-item span{font-size:14px;}
 
